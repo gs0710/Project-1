@@ -1,0 +1,29 @@
+flowchart TD
+    %% Styling Classes
+    classDef currentPhase fill:#1e3d59,stroke:#17252a,stroke-width:2px,color:#ffffff,font-weight:bold;
+    classDef futurePhase fill:#e8ecef,stroke:#6c757d,stroke-width:2px,stroke-dasharray: 5 5,color:#343a40,font-style:italic;
+    classDef milestone fill:#d95f02,stroke:#8c3200,stroke-width:2px,color:#ffffff,font-weight:bold;
+
+    subgraph PHASE1 ["PHASE 1: Problem Definition & Planning (Current Assignment)"]
+        A["1. Business Understanding<br/>(HR Analytics & Business Case)"]:::currentPhase --> B["2. Stakeholder Analysis<br/>(Governance & Access Matrix)"]:::currentPhase
+        B --> C["3. Dataset Acquisition<br/>(Verified IBM Benchmark)"]:::currentPhase
+        C --> D["4. Dataset Validation<br/>(Completeness & Schema Audit)"]:::currentPhase
+        D --> E["5. Feature Dictionary<br/>(35 Attributes & Taxonomies)"]:::currentPhase
+        E --> F["6. Target Definition<br/>(Attrition Class & Imbalance)"]:::currentPhase
+        F --> G["7. Business KPI Definition<br/>(Formulas, Nuances, Denominators)"]:::currentPhase
+        G --> H["8. Basic Exploratory Data Analysis<br/>(Visualizations & Cross-Tabulations)"]:::currentPhase
+        H --> I["9. Ethics & Privacy Review<br/>(Protected Demographics & Fairness)"]:::currentPhase
+        I --> J["10. Problem Formulation<br/>(Scope, Hypotheses & Limitations)"]:::currentPhase
+        J --> K["11. Project Roadmap<br/>(Gantt Schedule & Deliverables)"]:::currentPhase
+        K --> L["12. GitHub Documentation<br/>(README, Reports & Codebase)"]:::currentPhase
+    end
+
+    subgraph PHASE2 ["PHASE 2: Advanced Predictive Modeling (Future Project Scope)"]
+        M["13. Data Preprocessing & Encoding<br/>(One-Hot, Scaling, Resampling)"]:::futurePhase --> N["14. Baseline Model Selection<br/>(Logistic Regression, Decision Trees)"]:::futurePhase
+        N --> O["15. Advanced Ensembles & Tuning<br/>(Random Forest, XGBoost, LightGBM)"]:::futurePhase
+        O --> P["16. Model Explainability<br/>(SHAP, Feature Attribution)"]:::futurePhase
+        P --> Q["17. Fairness Auditing<br/>(Disparate Impact & Equalized Odds)"]:::futurePhase
+        Q --> R["18. Retention Decision Support<br/>(Ethical, Supportive Interventions)"]:::milestone
+    end
+
+    L ==> M
